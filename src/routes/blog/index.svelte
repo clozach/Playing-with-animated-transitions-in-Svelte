@@ -26,6 +26,9 @@
     max-width: 50px;
     margin: 0 0 1em 0;
   }
+  p {
+    color: hsl(200, 82%, 29%);
+  }
 </style>
 
 <svelte:head>
@@ -47,6 +50,12 @@
         </li>
       {/each}
     </ul>
+
+    <p
+      in:receive={{ key: 'text', duration: 800 }}
+      out:send={{ key: 'text', duration: 800 }}>
+      Route: '/blog'
+    </p>
 
     <figure>
       <img

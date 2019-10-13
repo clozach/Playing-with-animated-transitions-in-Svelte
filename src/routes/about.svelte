@@ -14,6 +14,9 @@
     max-width: 100px;
     margin: 12rem 0 1em 0;
   }
+  blockquote {
+    color: hsl(0, 82%, 29%);
+  }
 </style>
 
 <svelte:head>
@@ -34,5 +37,10 @@
     </figure>
 
     <p>This is the 'about' page. There's not much here.</p>
+    <blockquote
+      in:receive={{ key: 'text', duration: 800 }}
+      out:send={{ key: 'text', duration: 800 }}>
+      Route: '/about'
+    </blockquote>
   </div>
 </main>

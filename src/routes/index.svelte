@@ -37,6 +37,10 @@
       font-size: 4em;
     }
   }
+
+  h2 {
+    color: hsl(120, 82%, 29%);
+  }
 </style>
 
 <svelte:head>
@@ -46,6 +50,11 @@
 <main>
   <div transition:fade>
     <h1>Great success!</h1>
+    <h2
+      in:receive={{ key: 'text', duration: 800 }}
+      out:send={{ key: 'text', duration: 800 }}>
+      Route: '/' (home)
+    </h2>
 
     <figure>
       <img
