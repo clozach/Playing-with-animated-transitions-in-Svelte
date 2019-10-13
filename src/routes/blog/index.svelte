@@ -14,18 +14,25 @@
   export let posts;
 </script>
 
+<style>
+  ul {
+    margin: 0 0 1em 0;
+    line-height: 1.5;
+  }
+
+  img {
+    width: 10%;
+    max-width: 50px;
+    margin: 0 0 1em 0;
+  }
+</style>
+
 <svelte:head>
   <title>Blog</title>
 </svelte:head>
 
 <main>
   <div transition:fade>
-    <style>
-      ul {
-        margin: 0 0 1em 0;
-        line-height: 1.5;
-      }
-    </style>
     <h1>Recent posts</h1>
 
     <ul>
@@ -39,5 +46,10 @@
         </li>
       {/each}
     </ul>
+
+    <figure>
+      <img alt="Borat" src="great-success.png" />
+      <figcaption>HIGH FIVE!</figcaption>
+    </figure>
   </div>
 </main>
