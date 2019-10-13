@@ -1,5 +1,6 @@
 <script>
   import { fade } from "svelte/transition";
+  import { send, receive } from "../components/crossfade.js";
 </script>
 
 <style>
@@ -47,7 +48,11 @@
     <h1>Great success!</h1>
 
     <figure>
-      <img alt="Borat" src="great-success.png" />
+      <img
+        alt="Borat"
+        src="great-success.png"
+        in:receive={{ key: 'img', duration: 800 }}
+        out:send={{ key: 'img', duration: 800 }} />
       <figcaption>HIGH FIVE!</figcaption>
     </figure>
 
