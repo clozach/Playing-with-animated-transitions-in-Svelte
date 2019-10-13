@@ -5,7 +5,7 @@
 </script>
 
 <style>
-  main {
+  .padding {
     position: relative;
     max-width: 56em;
     background-color: white;
@@ -15,8 +15,9 @@
   }
 </style>
 
-<Nav {segment} />
-
 <main>
-  <slot />
+  <Nav {segment} />
+  <div class="padding">
+    <slot />
+  </div>
 </main>
